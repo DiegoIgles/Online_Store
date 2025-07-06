@@ -42,7 +42,7 @@ const CategoryList = () => {
             >
               {category.image ? (
                 <img
-                  src={`http://192.168.100.111:8000/storage/${category.image}`}
+                  src={`https://backend-eco.cisistemasficct.com/storage/${category.image}`}
                   alt={category.name}
                 />
               ) : (

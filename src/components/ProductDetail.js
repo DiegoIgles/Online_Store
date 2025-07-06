@@ -37,10 +37,10 @@ const ProductDetail = () => {
                         {product.images && product.images.filter(Boolean).map((img, index) => (
                             <img
                                 key={index}
-                                src={`http://192.168.100.111:8000${img}`}
+                                src={`https://backend-eco.cisistemasficct.com${img}`}
                                 alt={`Imagen ${index + 1} de ${product.name}`}
                                 className="carousel-image"
-                                onClick={() => setSelectedImage(`http://192.168.100.111:8000${img}`)}
+                                onClick={() => setSelectedImage(`https://backend-eco.cisistemasficct.com${img}`)}
                             />
                         ))}
                     </div>

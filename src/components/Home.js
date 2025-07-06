@@ -44,7 +44,7 @@ const Home = () => {
                 onClick={() => handleProductClick(product)}
               >
                 <img
-                  src={`http://192.168.100.111:8000/storage/${product.image1}`}
+                  src={`https://backend-eco.cisistemasficct.com/storage/${product.image1}`}
                   alt={product.name}
                 />
                 <h2>{product.name}</h2>

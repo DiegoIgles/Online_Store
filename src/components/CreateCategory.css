@@ -1,0 +1,114 @@
+/* Contenedor principal */
+.create-category-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  padding-right: 60px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.create-category-container h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Formulario */
+.create-category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Bloques de campo */
+.create-category-form div {
+  text-align: left;
+}
+
+.create-category-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.create-category-form input[type="text"],
+.create-category-form input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Mensaje de error */
+.create-category-form p {
+  color: red;
+  margin-top: -10px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Botón */
+.create-category-form button {
+  padding: 12px 20px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-category-form button:hover {
+  background: #45a049;
+}
+
+/* ========================
+   Responsive Design
+   ======================== */
+
+@media (max-width: 768px) {
+  .create-category-container {
+    margin: 80px auto;
+    padding: 25px;
+  }
+
+  .create-category-container h1 {
+    font-size: 24px;
+  }
+
+  .create-category-form input[type="text"],
+  .create-category-form input[type="file"] {
+    font-size: 14px;
+  }
+
+  .create-category-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-category-container {
+    margin: 60px auto;
+    padding: 20px;
+    padding-right: 50px;
+  }
+
+  .create-category-container h1 {
+    font-size: 20px;
+  }
+
+  .create-category-form input[type="text"],
+  .create-category-form input[type="file"] {
+    font-size: 13px;
+  }
+
+  .create-category-form button {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
+}

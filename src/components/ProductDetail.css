@@ -1,0 +1,153 @@
+/* src/components/ProductDetail.css */
+
+.product-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contenedor principal con flex */
+.product-content {
+    display: flex;
+    justify-content: space-between;  /* Alinea las imágenes y los detalles */
+    align-items: flex-start;  /* Alinea ambos elementos arriba */
+    gap: 30px;
+    flex-wrap: wrap; /* Para que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Carrusel de imágenes */
+.image-carousel {
+    width: 40%;  /* La sección de imágenes ocupará el 30% del ancho */
+    overflow-x: auto;  /* Habilita el scroll horizontal */
+    white-space: nowrap;  /* Evita que las imágenes se apilen */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* Alinea las imágenes a la izquierda */
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;  /* Se asegura de que no se salga del contenedor */
+     /* Aumenta la altura del contenedor para pantallas grandes */
+}
+
+/* Contenedor de las imágenes en el carrusel */
+.image-wrapper {
+    display: flex;
+    gap: 15px;  /* Espacio entre las imágenes */
+}
+
+.carousel-image {
+    width: 500;  /* Tamaño de las imágenes */
+    height: 500;  /* Ajustamos la altura para hacerla más cuadrada */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    object-fit: cover;  /* Mantiene la relación de aspecto sin distorsión */
+    cursor: pointer;  /* Cambia el cursor a mano cuando pasa sobre la imagen */
+}
+
+/* Sección de detalles del producto */
+.product-details {
+    width: 50%;  /* La sección de detalles ocupará el 45% del ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.product-details p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para la barra de scroll */
+.image-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.image-carousel::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Estilo responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .product-content {
+        flex-direction: column;  /* Cambio de columna en pantallas pequeñas */
+        align-items: center;  /* Centra el contenido */
+    }
+
+    .image-carousel {
+        width: 95%;  /* La imagen ocupa todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px;  /* Añadimos margen inferior para separación */
+        height: auto;  /* Ajustamos la altura en pantallas pequeñas */
+    }
+
+    .carousel-image {
+        width: 280px;  /* Reducimos el tamaño de las imágenes en móviles */
+        height: 290px;
+    }
+
+    .product-details {
+        width: 100%;  /* La sección de detalles ocupa el 100% del ancho */
+    }
+}
+
+/* Estilo para pantallas más grandes */
+@media (min-width: 769px) {
+    .image-carousel {
+        height: 450px;  /* Aumentamos la altura del contenedor para pantallas grandes */
+    }
+
+    .carousel-image {
+        width: 440px;  /* Imágenes más grandes en pantallas grandes */
+        height: 440px;  /* Aumentamos la altura para que sea cuadrada */
+    }
+}
+.buy-button {
+    background-color: #25D366;  /* Color verde de WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #128C7E;  /* Color más oscuro al pasar el mouse */
+}
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-modal-overlay:hover {
+    cursor: pointer;
+}

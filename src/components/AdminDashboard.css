@@ -1,0 +1,345 @@
+.admin-dashboard {
+  max-width: 1000px; /* un poco más ancho para tablas */
+  margin: 100px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.admin-dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.admin-summary {
+  margin-bottom: 30px;
+}
+
+.admin-summary p {
+  font-size: 18px;
+}
+
+.admin-actions {
+  margin-bottom: 40px;
+}
+
+.admin-actions button {
+  margin: 10px;
+  padding: 12px 20px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-actions button:hover {
+  background: #45a049;
+}
+
+.admin-error {
+  color: red;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.admin-loading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* ==============================
+   Tabla de usuarios
+   ============================== */
+.admin-users h2 {
+  margin-bottom: 15px;
+}
+
+.admin-users {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+
+.admin-users table {
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+/* Desktop: tabla usa todo el ancho */
+@media (min-width: 769px) {
+  .admin-users table {
+    display: table;   /* ✅ vuelve a tabla normal */
+    width: 100%;      /* ✅ usa todo el contenedor */
+    min-width: unset; /* ✅ sin ancho mínimo fijo */
+  }
+  .admin-products table {
+    display: table;   /* ✅ vuelve a tabla normal */
+    width: 100%;      /* ✅ usa todo el contenedor */
+    min-width: unset; /* ✅ sin ancho mínimo fijo */
+  }
+}
+
+
+
+
+.admin-users th,
+.admin-users td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+
+
+.admin-users th {
+  background-color: #f4f4f4;
+}
+
+.admin-users tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-users tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-users td {
+  word-break: break-word; /* Evita que correos largos rompan el layout */
+}
+
+/* ==============================
+   Responsive para tablet/móvil
+   ============================== */
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 20px;
+    margin: 80px auto;
+  }
+
+  .admin-summary p {
+    font-size: 16px;
+  }
+
+  .admin-actions button {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .admin-users table {
+    font-size: 14px;
+    display: block;   /* ✅ tabla como bloque scrollable */
+    width: 100%;
+    min-width: 100%; /* ✅ obliga a usar scroll si la pantalla es chica */
+    overflow-x: auto;
+  }
+  .admin-users th,
+  .admin-users td {
+    padding: 10px 12px;
+  }
+}
+
+
+/* Botones dentro de tabla */
+.edit-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: #1976D2;
+}
+
+.users-actions {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.create-user-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.create-user-btn:hover {
+  background: #45a049;
+}
+
+/* Responsive para botones */
+@media (max-width: 768px) {
+  .edit-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .create-user-btn {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .users-actions {
+    text-align: center;
+  }
+}
+/* Botón Eliminar dentro de tabla */
+.delete-btn {
+  margin-left: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #F44336;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #D32F2F;
+}
+
+/* Responsive para que no se sobrepongan */
+@media (max-width: 768px) {
+  .delete-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  
+}
+
+/* ==============================
+   Tabla de productos
+   ============================== */
+
+.admin-products {
+  margin-top: 60px;
+  overflow-x: auto; /* Scroll horizontal si es necesario */
+}
+
+.admin-products h2 {
+  margin-bottom: 15px;
+}
+
+.admin-products table {
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+
+
+
+/* Móvil/tablet: tabla scroll horizontal */
+@media (max-width: 768px) {
+  .admin-products table {
+    display: block;
+    width: 100%;
+    min-width: 600px; /* Forzar scroll si la pantalla es estrecha */
+    overflow-x: auto;
+  }
+}
+
+.admin-products th,
+.admin-products td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.admin-products th {
+  background-color: #f4f4f4;
+}
+
+.admin-products tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-products tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-products td {
+  word-break: break-word;
+}
+
+
+
+@media (max-width: 480px) {
+  .admin-products table {
+    font-size: 12px;
+    min-width: 100%; /* Asegura ancho completo en scroll horizontal */
+
+  }
+}
+
+/* Botón eliminar productos */
+.admin-products .delete-btn {
+  margin-left: 0;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #F44336;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-products .delete-btn:hover {
+  background: #D32F2F;
+}
+
+@media (max-width: 768px) {
+  .admin-products .delete-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+/* ==============================
+   Select desplegable de categoría
+   ============================== */
+
+.category-select {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-select:focus {
+  border-color: #4CAF50; /* Mismo verde que usas */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+.category-select option {
+  color: #333;
+  background: #fff;
+}
+
+
+
+
+

@@ -1,0 +1,150 @@
+/* Contenedor de la lista de productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que los productos se ajusten a varias filas */
+    gap: 20px;  /* Espaciado entre los productos */
+    justify-content: center;  /* Centra los productos horizontalmente */
+    padding: 0px;
+    overflow-y: auto;  /* Permite el scroll vertical si hay más productos */
+}
+#product-h1 {
+    margin-top: 55px ;
+  text-align: center;
+}
+/* Estilo de la tarjeta de cada producto */
+.product-card {
+    width: 30%;  /* Por defecto, las tarjetas ocupan el 25% del contenedor (4 productos por fila) */
+    height: 370px;  /* Reducimos la altura de la tarjeta */
+    border: 1px solid #ddd;
+    padding: 5px;  /* Reducimos el padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.3s ease;  /* Agregamos la transición */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido dentro de la tarjeta esté distribuido */
+}
+
+/* Efecto hover en la tarjeta */
+.product-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+    transform: translateY(-25px);  /* Sube un poco el producto */
+}
+
+/* Imagen dentro de la tarjeta */
+.product-card img {
+    width: 100%;  /* La imagen ocupa el 100% del contenedor de la tarjeta */
+    height: 80%;  /* Definimos una altura fija para la imagen */
+    object-fit: cover;  /* Recorta la imagen para mantener su proporción */
+    border-radius: 8px;
+}
+
+/* Título del producto */
+.product-card h2 {
+    font-size: 18px;  /* Reducimos un poco el tamaño del título */
+    margin: 10px 0;
+}
+
+/* Descripción y precio del producto */
+.product-card p {
+    font-size: 14px;  /* Reducimos el tamaño de la fuente */
+    color: #333;
+}
+
+/* Estilos para el modal de detalles */
+.product-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #555;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Para pantallas grandes, como laptops y desktop */
+
+
+
+
+/* Para dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 767px) {
+    .product-card {
+        width: 100%;  /* 2 productos por fila */
+        padding: 5px;  /* Reducimos el padding para móviles */
+        height: 100%;
+    }
+}
+
+
+/* Contenedor del buscador */
+.search-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo para el input del buscador */
+.search-container input {
+    width: 80%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Estilo al enfocar el input */
+.search-container input:focus {
+    border-color: #4CAF50; /* Color verde al enfocar */
+    box-shadow: 0 4px 12px rgba(0, 200, 0, 0.2);
+}
+.product-list {
+  position: relative;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+}

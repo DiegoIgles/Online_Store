@@ -1,0 +1,144 @@
+/* ========================================
+   Animación de fadeUp
+======================================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   Contenedor principal del Home
+======================================== */
+.home-container {
+  text-align: center;
+  padding: 100px 20px 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+}
+
+.home-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.home-container p {
+  font-size: 18px;
+  color: #555;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ========================================
+   Hero
+======================================== */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+}
+
+/* ========================================
+   Lista de productos destacados (igual a ProductList)
+======================================== */
+
+
+
+
+
+
+
+
+
+/* ========================================
+   Botón ver más
+======================================== */
+.see-more-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #5045a0;
+}
+
+/* ========================================
+   Responsive Design
+======================================== */
+
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 60px 0 20px; /* Sin padding lateral */
+  }
+
+  .featured-list {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px; /* pequeño margen lateral */
+  }
+
+  .featured-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .home-container h1 {
+    font-size: 24px;
+  }
+
+  .home-container p {
+    font-size: 15px;
+  }
+
+  .see-more-btn {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 30px 0 10px;
+  }
+
+  .featured-list {
+    padding: 0 8px;
+  }
+
+  .home-container h1 {
+    font-size: 20px;
+  }
+
+  .home-container p {
+    font-size: 14px;
+  }
+
+  .see-more-btn {
+    width: 100%;
+  }
+}

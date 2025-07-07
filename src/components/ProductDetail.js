@@ -80,11 +80,7 @@ const ProductDetail = () => {
            🛒 Comprar con Tarjeta
           </button>
 
-          <a href={`https://wa.me/75982874?text=Hola,%20estoy%20interesado%20en%20el%20producto%20${product.name}%20y%20me%20gustaría%20realizar%20una%20compra.`} target="_blank" rel="noopener noreferrer">
-            <button className="buy-button">
-              🟢 WhatsApp
-            </button>
-          </a>
+          
         </div>
       </div>
 

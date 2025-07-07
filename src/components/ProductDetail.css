@@ -122,7 +122,10 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    width: 70%;
+    
 }
+
 
 .buy-button:hover {
     background-color: #128C7E;  /* Color más oscuro al pasar el mouse */

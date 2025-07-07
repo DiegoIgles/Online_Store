@@ -16,7 +16,7 @@ const Footer = () => {
       {/* Info de contacto */}
       <div className="footer-contact">
         <p>Email: contacto@hometech.com</p>
-        <p>Tel: +591 70000000</p>
+        <p>Tel: +591 75982874</p>
       </div>
 
       {/* Derechos */}

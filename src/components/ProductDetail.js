@@ -39,7 +39,8 @@ const ProductDetail = () => {
       amount: product.price,
       currency: 'USD',
       description: product.name,
-  
+       document: '12345678' // 👈 DNI de prueba
+
     });
 
     console.log('✅ Respuesta:', response.data);
@@ -62,10 +63,10 @@ const ProductDetail = () => {
             {product.images && product.images.filter(Boolean).map((img, index) => (
               <img
                 key={index}
-                src={`https://backend-eco.cisistemasficct.com${img}`}
+                src={`http://192.168.100.111:8000${img}`}
                 alt={`Imagen ${index + 1} de ${product.name}`}
                 className="carousel-image"
-                onClick={() => setSelectedImage(`https://backend-eco.cisistemasficct.com${img}`)}
+                onClick={() => setSelectedImage(`http://192.168.100.111:8000${img}`)}
               />
             ))}
           </div>
@@ -80,7 +81,7 @@ const ProductDetail = () => {
            🛒 Comprar con Tarjeta
           </button>
 
-          
+         
         </div>
       </div>
 

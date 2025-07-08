@@ -60,16 +60,17 @@ const ProductDetail = () => {
       <div className="product-content">
         <div className="image-carousel">
           <div className="image-wrapper">
-            {product.images && product.images.filter(Boolean).map((img, index) => (
-              <img
-                key={index}
-                src={`http://192.168.100.111:8000${img}`}
-                alt={`Imagen ${index + 1} de ${product.name}`}
-                className="carousel-image"
-                onClick={() => setSelectedImage(`http://192.168.100.111:8000${img}`)}
-              />
-            ))}
-          </div>
+  {product.images && product.images.filter(Boolean).map((img, index) => (
+    <img
+      key={index}
+      src={img} // ✅ usar tal cual viene
+      alt={`Imagen ${index + 1} de ${product.name}`}
+      className="carousel-image"
+      onClick={() => setSelectedImage(img)}
+    />
+  ))}
+</div>
+
         </div>
 
         <div className="product-details">
